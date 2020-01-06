@@ -13,12 +13,20 @@
     </div>
     <div>
       <input id="ipt-2" type="text" placeholder="Digite sua mensagem" />
-      <button id="bt-2" type="submit">Enviar</button>
+      <button id="bt-2" type="submit" onclick="getValueBT2()">Enviar</button>
     </div>
     <script>
       var msg = "Hello World!";
       document.querySelector("#ipt-1").value = "Hello World!";
       document.querySelector("#ipt-2").value = "Hello World!";
+
+      // Define function onclick para botao #bt-2
+      var ipt2_value
+      function getValueBT2() { 
+        ipt2_value = document.querySelector('#ipt-2').value; 
+        document.querySelector('#ipt-2').value = null;
+        console.log(ipt2_value);
+      };
     </script>
   </body>
 </html>
