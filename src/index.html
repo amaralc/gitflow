@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <div id="app1">
       <input id="ipt-1" type="text" />
       <button id="bt-1" type="submit">Enviar</button>
     </div>
@@ -19,14 +19,15 @@
       var msg = "Hello World!";
       document.querySelector("#ipt-1").value = "Hello World!";
       document.querySelector("#ipt-2").value = "Hello World!";
+      var inputElement1 = document.querySelector("#app1 input");
 
       // Define function onclick para botao #bt-2
-      var ipt2_value
-      function getValueBT2() { 
-        ipt2_value = document.querySelector('#ipt-2').value; 
-        document.querySelector('#ipt-2').value = null;
+      var ipt2_value;
+      function getValueBT2() {
+        ipt2_value = document.querySelector("#ipt-2").value;
+        document.querySelector("#ipt-2").value = null;
         console.log(ipt2_value);
-      };
+      }
     </script>
   </body>
 </html>
