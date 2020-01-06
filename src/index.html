@@ -7,13 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <div id="div-1">
       <input id="ipt-1" type="text" placeholder="Digite sua mensagem" />
-      <button id="bt-1" type="submit" onclick="getValueBT1()">Enviar</button>
+      <button id="bt-1" type="submit" onclick="getValue(this.parentNode.id)">Enviar</button>
     </div>
-    <div>
+    <div id="div-2">
       <input id="ipt-2" type="text" placeholder="Digite sua mensagem" />
-      <button id="bt-2" type="submit" onclick="getValueBT2()">Enviar</button>
+      <button id="bt-2" type="submit" onclick="getValue(this.parentNode.id)">Enviar</button>
     </div>
     <script>
       
@@ -21,20 +21,13 @@
       document.querySelector("#ipt-1").value = "Hello World!";
       document.querySelector("#ipt-2").value = "Hello World!";
 
-      // Define function onclick para os botões #bt-1
-      var ipt1_value;
-      function getValueBT1() {
-        ipt2_value = document.querySelector("#ipt-1").value;
-        document.querySelector("#ipt-1").value = null;
-        console.log(ipt2_value);
-      }
-      
-      // Define function onclick para os botões #bt-2
-      var ipt2_value;
-      function getValueBT2() {
-        ipt2_value = document.querySelector("#ipt-2").value;
-        document.querySelector("#ipt-2").value = null;
-        console.log(ipt2_value);
+      // Define function onclick que guarde valor do input (respectivo ao botao clicado) em uma variavel
+      var inputValue;
+      function getValue(parentNodeId){        
+        var selectorID = "#" + parentNodeId + " input";
+        var inputValue = document.querySelector(selectorID).value;
+        document.querySelector(selectorID).value = null;
+        console.log(inputValue);
       }
     </script>
   </body>
