@@ -15,20 +15,6 @@
       <input id="ipt-2" type="text" placeholder="Digite sua mensagem" />
       <button id="bt-2" type="submit" onclick="getValue(this.parentNode.id)">Enviar</button>
     </div>
-    <script>
-      
-      var msg = "Hello World!";
-      document.querySelector("#ipt-1").value = "Hello World!";
-      document.querySelector("#ipt-2").value = "Hello World!";
-
-      // Define function onclick que guarde valor do input (respectivo ao botao clicado) em uma variavel
-      var inputValue;
-      function getValue(parentNodeId){        
-        var selectorID = "#" + parentNodeId + " input";
-        var inputValue = document.querySelector(selectorID).value;
-        document.querySelector(selectorID).value = null;
-        console.log(inputValue);
-      }
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
