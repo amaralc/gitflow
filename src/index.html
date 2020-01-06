@@ -7,6 +7,14 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text">
+    <div id="div-1">
+      <input id="ipt-1" type="text" placeholder="Digite sua mensagem" />
+      <button id="bt-1" type="submit" onclick="getValue(this.parentNode.id)">Enviar</button>
+    </div>
+    <div id="div-2">
+      <input id="ipt-2" type="text" placeholder="Digite sua mensagem" />
+      <button id="bt-2" type="submit" onclick="getValue(this.parentNode.id)">Enviar</button>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
