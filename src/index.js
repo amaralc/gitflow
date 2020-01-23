@@ -1,0 +1,1 @@
+var buttonElement = document.querySelector ('#teste button');
