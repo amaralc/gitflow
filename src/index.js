@@ -4,7 +4,6 @@ var buttonElement = document.querySelector ('#teste button');
 var inputValue;
 function getValue(parentNodeId){        
   var selectorID = "#" + parentNodeId + " input";
-  var inputValue = document.querySelector(selectorID).value;
-  document.querySelector(selectorID).value = null;
+  var inputValue = document.querySelector(selectorID).value;  
   console.log(inputValue);   
 }
